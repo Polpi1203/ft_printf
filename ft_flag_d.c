@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_flag_d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 11:46:01 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 10:28:41 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/10 10:32:32 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdarg.h>
+void    ft_flag_d(int   c)
+{
+    char    *s;
+	int		d;
 
-int	    ft_printf(const char *, ...);
-void    ft_flag_d(int   c);
-int		ft_reverse(int	c);
-
-#endif
+	s = "0123456789";
+	d = c;
+	if (c < 0)
+		d = ft_reverse(c);
+		//printf("%d", d);
+    if (d > 9)
+	{
+		ft_flag_d(d / 10);
+		ft_flag_d(d % 10);
+	}
+	else 
+		write (1, &s[d], 1);
+}
