@@ -1,6 +1,7 @@
 NAME = libftprintf.a
 
 SRCS = ft_printf.c\
+			ft_flag_d.c\
 
 OBJS	=	${SRCS:.c=.o}
 

@@ -6,13 +6,13 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 10:32:32 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/10 15:03:14 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_flag_d(int   c)
+va_list	ft_flag_d(int   c)
 {
     char    *s;
 	int		d;
@@ -21,7 +21,6 @@ void    ft_flag_d(int   c)
 	d = c;
 	if (c < 0)
 		d = ft_reverse(c);
-		//printf("%d", d);
     if (d > 9)
 	{
 		ft_flag_d(d / 10);
@@ -29,4 +28,5 @@ void    ft_flag_d(int   c)
 	}
 	else 
 		write (1, &s[d], 1);
+	return(c);
 }

@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:46:01 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 10:28:41 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/10 15:02:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,25 @@
 #include <stdarg.h>
 
 int	    ft_printf(const char *, ...);
-void    ft_flag_d(int   c);
+void    ft_flag_c(char c);
+va_list ft_flag_d(int   c);
+void    ft_flag_i(int, int);
+void    ft_flag_p(int, int);
+void    ft_flag_s(int, int);
+void    ft_flag_u(int, int);
+void    ft_flag_x(int, int);
+void    ft_flag_X(int, int);
+void    ft_flag_percent(int, int);
 int		ft_reverse(int	c);
+
+
+typedef struct s_func
+{
+    void    (*ptrfunc)(va_list ap);
+    char    key;
+}              t_func;
+
+
+
 
 #endif
