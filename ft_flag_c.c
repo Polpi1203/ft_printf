@@ -6,13 +6,15 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:56:40 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 14:32:01 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/10 16:04:28 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
+/*
 void	ft_flag_c(char c)
 {
 	write (1, &c, 1);
 }
+*/

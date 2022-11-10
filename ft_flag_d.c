@@ -6,13 +6,13 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 15:03:14 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/10 16:01:54 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-va_list	ft_flag_d(int   c)
+void	ft_flag_d(int   c)
 {
     char    *s;
 	int		d;
@@ -28,5 +28,4 @@ va_list	ft_flag_d(int   c)
 	}
 	else 
 		write (1, &s[d], 1);
-	return(c);
 }
