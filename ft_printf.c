@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 16:04:05 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/11 11:01:29 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,47 @@
 // https://openclassrooms.com/forum/sujet/codage-de-printf-40932
 
 /* Initialiser une variable va_list ap */
-
 #include "ft_printf.h"
+int	ft_check(va_list ap, char	check)
+{
+	int	len;
 
+	len = 0;
+	{
+		if (check == 'd')
+			ft_flag_d(va_arg(ap, int));
+	}
+	return (len);
+}
 int	ft_printf(const char *s, ...)
 {
 	int		i;
 	va_list	ap;
+	int		len;
 
 	i = 0;
 	va_start(ap, s);
-	
+	len = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == '%')
 		{
-			i++;
-			if (s[i] == 'd')
-				ft_flag_d(va_arg(ap, int));
-			//else if (s[i] == 'c')
-				//ft_flag_c(va_arg(ap, char));
+		len +=	(ft_check(ap, s[i++]) + 1);
 		}
-	i++;
+	
 	}
-	//printf("%d", i); 
 	va_end(ap);
-	return (1);
+	return (len);
 }
-
 
 int main(int argc, char **argv)
 {
 	(void)argc;
-	ft_printf("%d", atoi(argv[1]));
+	printf("%s\n", "------FT_PRINTF------");
 
-	printf("\n");
+	printf("%d\n",ft_printf("%d\n", atoi(argv[1])));
 
-	printf("%d\n", atoi(argv[1]));
+	printf("%s\n", "------PRINTF------");
+
+	printf("%d\n", printf("%d\n", atoi(argv[1])));
 }

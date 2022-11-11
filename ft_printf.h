@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:46:01 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 16:02:41 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/11 10:24:16 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 int	    ft_printf(const char *, ...);
 void    ft_flag_c(char c);
-void    ft_flag_d(int   c);
+int     ft_flag_d(int   c);
 void    ft_flag_i(int, int);
 void    ft_flag_p(int, int);
 void    ft_flag_s(int, int);
@@ -30,6 +30,8 @@ void    ft_flag_x(int, int);
 void    ft_flag_X(int, int);
 void    ft_flag_percent(int, int);
 int		ft_reverse(int	c);
+int		ft_strlen_int(int	len);
+char	*ft_itoa(int n);
 
 
 #endif

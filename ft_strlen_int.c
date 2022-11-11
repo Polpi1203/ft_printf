@@ -1,13 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_u.c                                        :+:      :+:    :+:   */
+/*   ft_strlen_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 16:56:53 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/10 14:32:18 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/11 09:41:13 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/11 11:02:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
+
+int	ft_strlen_int(int	len)
+{
+	int		i;
+	int		size_len;
+	char	*str;
+
+	i = 0;
+	size_len = 0;
+	str = ft_itoa(len);
+	while (str[i++] != '\0')
+		size_len++;
+	return (size_len);
+}

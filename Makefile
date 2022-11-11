@@ -1,7 +1,6 @@
 NAME = libftprintf.a
 
-SRCS = ft_printf.c\
-			ft_flag_d.c\
+SRCS = $(wildcard)*.c
 
 OBJS	=	${SRCS:.c=.o}
 
