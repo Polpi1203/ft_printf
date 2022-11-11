@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_d.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 13:16:08 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/02 20:42:48 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/11 13:19:00 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
-int	ft_flag_d(int   c)
+void	ft_putstr(char *s)
 {
-	int	len;
+	int	i;
 
-	ft_putnbr(c);
-	printf("%d", c);
-	len = ft_strlen_int(c);
-	return (len);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write (1, &s[i], 1);
+		i++;
+	}
 }
+/*
+int main(void)
+{
+	char	*s;
+
+	s = "Je vais a la boulangerie";
+
+	ft_putstr_fd(s, 1);
+}
+*/

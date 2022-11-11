@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:46:01 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 10:24:16 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/11 13:22:47 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ void    ft_flag_percent(int, int);
 int		ft_reverse(int	c);
 int		ft_strlen_int(int	len);
 char	*ft_itoa(int n);
+void	ft_putnbr(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char *s);
 
 
 #endif

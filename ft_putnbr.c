@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_d.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 13:16:08 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/02 20:57:18 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/11 13:26:47 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
-int	ft_flag_d(int   c)
+void	ft_putnbr(int n)
 {
-	int	len;
+	char	*nbr;
 
-	ft_putnbr(c);
-	printf("%d", c);
-	len = ft_strlen_int(c);
-	return (len);
+	nbr = "0123456789";
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else
+	{
+		if (n < 0)
+		{
+			n = n * -1;
+			write (1, "-", 1);
+		}
+		if (n > 9)
+			ft_putnbr(n / 10);
+		ft_putchar((n % 10 + '0'));
+	}
 }
+/*
+int main(void)
+{
+	ft_putnbr_fd(-2147483648, 1);
+}
+*/

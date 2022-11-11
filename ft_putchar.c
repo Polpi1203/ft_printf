@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_d.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 13:16:08 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/02 20:31:22 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/11 13:24:44 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
-int	ft_flag_d(int   c)
+void	ft_putchar(char c)
 {
-	int	len;
-
-	ft_putnbr(c);
-	printf("%d", c);
-	len = ft_strlen_int(c);
-	return (len);
+	write (1, &c, 1);
 }
+/*
+int main(void)
+{
+	ft_putchar_fd('a', 1);
+}
+*/
