@@ -6,19 +6,13 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:31:22 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 13:24:44 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/11 13:42:56 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }
-/*
-int main(void)
-{
-	ft_putchar_fd('a', 1);
-}
-*/

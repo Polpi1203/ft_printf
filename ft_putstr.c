@@ -6,11 +6,11 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:42:48 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 13:19:00 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/11 13:42:47 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putstr(char *s)
 {
@@ -23,13 +23,3 @@ void	ft_putstr(char *s)
 		i++;
 	}
 }
-/*
-int main(void)
-{
-	char	*s;
-
-	s = "Je vais a la boulangerie";
-
-	ft_putstr_fd(s, 1);
-}
-*/

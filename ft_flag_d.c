@@ -6,18 +6,16 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 16:56:43 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/11 13:16:08 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/11 15:38:28 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_flag_d(int   c)
+int	ft_flag_d(int c)
 {
 	int	len;
 
-	ft_putnbr(c);
-	printf("%d", c);
-	len = ft_strlen_int(c);
+	len = ft_putnbr(c);
 	return (len);
 }
