@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:18:47 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 16:54:59 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/15 20:23:51 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int	ft_strlen_unsigned_int(unsigned int nbr)
 	return (i);
 }
 
-int ft_unsigned_putnbr(unsigned int nbr)
+int	ft_unsigned_putnbr(unsigned int nbr)
 {
-    int    i;
+	int	i;
 
 	i = 0;
-    if (nbr > 9)
-        ft_unsigned_putnbr(nbr / 10);
-    ft_putchar((nbr % 10 + '0'));
+	if (nbr > 9)
+		ft_unsigned_putnbr(nbr / 10);
+	ft_putchar((nbr % 10 + '0'));
 	i += ft_strlen_unsigned_int(nbr);
 	return (i);
 }

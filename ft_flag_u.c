@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:16:19 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 16:55:12 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/15 20:21:12 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	ft_flag_u(unsigned int nbr)
 	int	len;
 
 	len = 0;
-
 	len = ft_unsigned_putnbr(nbr);
 	return (len);
 }

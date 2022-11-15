@@ -6,11 +6,9 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 18:14:26 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/15 20:18:18 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// https://github.com/xicodomingues/francinette/blob/master/tests/printf/fsoares/mandatory.c
 
 #include "ft_printf.h"
 
@@ -96,5 +94,16 @@ int	main(int argc, char **argv)
 	printf("\n%d", ft_printf(" %% "));
 	printf("\n%s\n", "------PRINTF------");
 	printf("\n%d", printf(" %% "));
+}
+*/
+/*
+int	main(int argc, char **argv)
+{
+	(void)argc;
+	(void)argv;
+	printf("%s\n", "------FT_PRINTF------");
+	printf("\n%d", ft_printf(" %d ", 0));
+	printf("\n%s\n", "------PRINTF------");
+	printf("\n%d", printf(" %d ", 0));
 }
 */

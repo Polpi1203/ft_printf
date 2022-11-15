@@ -6,13 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:08:49 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 18:11:45 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/15 20:20:35 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_flag_prc(int	c)
+int	ft_flag_prc(int c)
 {
 	ft_putchar(c);
 	return (1);
