@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_flag_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 20:57:18 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 15:54:42 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/15 15:45:52 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/15 15:56:19 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_flag_s(char *str)
 {
-	int		i;
+	int	len;
 
-	i = 0;
-	if (n == -2147483648)
-	{
-		ft_putstr("-2147483648");
-		i++;
-	}
-	else
-	{
-		if (n < 0)
-		{
-			n = n * -1;
-			write (1, "-", 1);
-			i++;
-		}
-		if (n > 9)
-			ft_putnbr(n / 10);
-		ft_putchar((n % 10 + '0'));
-	}
-	i += ft_strlen_int(n);
-	return (i);
+	len = 0;
+	len = ft_putstr(str);
+	return (len);
 }
