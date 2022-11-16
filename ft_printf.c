@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 20:18:18 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/16 17:20:03 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	ft_check(va_list ap, char check)
 		len = ft_flag_u(va_arg(ap, unsigned int));
 	else if (check == '%')
 		len = ft_flag_prc('%');
+	else if (check == 'x')
+		len = ft_convert_base(va_arg(ap, int));
 	return (len);
 }
 
@@ -105,5 +107,16 @@ int	main(int argc, char **argv)
 	printf("\n%d", ft_printf(" %d ", 0));
 	printf("\n%s\n", "------PRINTF------");
 	printf("\n%d", printf(" %d ", 0));
+}
+*/
+/*
+int	main(int argc, char **argv)
+{
+	(void)argc;
+	(void)argv;
+	printf("%s\n", "------FT_PRINTF------");
+	printf("\n%d", ft_printf(" %x ", -1));
+	printf("\n%s\n", "------PRINTF------");
+	printf("\n%d", printf(" %x ", -1));
 }
 */
