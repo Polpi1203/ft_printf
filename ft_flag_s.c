@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_flag_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:45:52 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 20:19:33 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/17 11:26:09 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ int	ft_flag_s(char *str)
 	int	len;
 
 	len = 0;
-	len = ft_putstr(str);
+	if (str == NULL)
+		len = ft_putstr("(null)");
+	else 
+		len = ft_putstr(str);
 	return (len);
 }

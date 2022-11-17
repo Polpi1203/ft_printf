@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_flag_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:16:19 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 20:21:12 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/17 11:28:50 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ int	ft_flag_u(unsigned int nbr)
 
 	len = 0;
 	len = ft_unsigned_putnbr(nbr);
+	if (nbr == 0)
+		return (len + 1);
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/17 10:32:03 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/17 12:37:25 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	ft_check(va_list ap, char check)
 		len = ft_convert_base(va_arg(ap, unsigned int), "0123456789abcdef");
 	else if (check == 'X')
 		len = ft_convert_base(va_arg(ap, unsigned int), "0123456789ABCDEF");
+	else if (check == 'p')
+		len = ft_convert_long(((unsigned long)va_arg(ap, void *)), "0123456789abcdef");
 	return (len);
 }
 
@@ -73,9 +75,9 @@ int	main(int argc, char **argv)
 	(void)argc;
 	(void)argv;
 	printf("%s\n", "------FT_PRINTF------");
-	printf("\n%d", ft_printf(" %s %s %s %s", " - ", "", "4", ""));
+	printf("\n%d", ft_printf(" NULL %s NULL ", NULL));
 	printf("\n%s\n", "------PRINTF------");
-	printf("\n%d", printf(" %s %s %s %s", " - ", "", "4", ""));
+	printf("\n%d", printf(" NULL %s NULL ", NULL));
 }
 */
 /*
@@ -84,9 +86,9 @@ int	main(int argc, char **argv)
 	(void)argc;
 	(void)argv;
 	printf("%s\n", "------FT_PRINTF------");
-	printf("\n%d", ft_printf("%u", -1));
+	printf("\n%d", ft_printf("%u", 0));
 	printf("\n%s\n", "------PRINTF------");
-	printf("\n%d", printf("%u", -1));
+	printf("\n%d", printf("%u", 0));
 }
 */
 /*
@@ -120,5 +122,22 @@ int	main(int argc, char **argv)
 	printf("\n%d", ft_printf(" %x ", 127));
 	printf("\n%s\n", "------PRINTF------");
 	printf("\n%d", printf(" %x ", 127));
+}
+*/
+/*
+int	main(int argc, char **argv)
+{
+	(void)argc;
+	(void)argv;
+	int	a;
+	int	*b;
+
+	a = 2147483647;
+	b = &a;
+
+	printf("%s\n", "------FT_PRINTF------");
+	printf("\n%d", ft_printf(" %p ", NULL));
+	printf("\n%s\n", "------PRINTF------");
+	printf("\n%d", printf(" %p ", b));
 }
 */
