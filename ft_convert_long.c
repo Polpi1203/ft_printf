@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 10:46:12 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/17 13:09:08 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:30:09 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	ft_putchar_hexa(unsigned long c, char *str)
 	write (1, &str[c], 1);
 }
 
-int   ft_convert_hexa(unsigned long nbr, char *str)
+int	ft_convert_hexa(unsigned long nbr, char *str)
 {
 	int	len;
 

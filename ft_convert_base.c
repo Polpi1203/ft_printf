@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:17:14 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/17 13:22:21 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:29:27 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_putchar_hexa(unsigned int c, char *str)
 {
 	write (1, &str[c], 1);
 }
+
 int	ft_convert_base(unsigned int nbr, char *str)
 {
 	int	len;
@@ -42,4 +43,3 @@ int	ft_convert_base(unsigned int nbr, char *str)
 	len += ft_strlen_unsigned_int(nbr);
 	return (len);
 }
-			

@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:45:52 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/17 11:26:09 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:30:30 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_flag_s(char *str)
 	len = 0;
 	if (str == NULL)
 		len = ft_putstr("(null)");
-	else 
+	else
 		len = ft_putstr(str);
 	return (len);
 }

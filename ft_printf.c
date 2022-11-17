@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/17 12:37:25 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:31:30 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_check(va_list ap, char check)
 	else if (check == 'X')
 		len = ft_convert_base(va_arg(ap, unsigned int), "0123456789ABCDEF");
 	else if (check == 'p')
-		len = ft_convert_long(((unsigned long)va_arg(ap, void *)), "0123456789abcdef");
+		len = ft_convert_long((va_arg(ap, unsigned long)), "0123456789abcdef");
 	return (len);
 }
 
@@ -55,7 +55,6 @@ int	ft_printf(const char *s, ...)
 	va_end(ap);
 	return (len);
 }
-
 
 //-------------TEST %c----------------
 /*
