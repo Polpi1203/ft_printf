@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unsigned_putnbr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:18:47 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/15 20:23:51 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/17 10:14:49 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen_unsigned_int(unsigned int nbr)
+static int	ft_strlen_unsigned_int(unsigned int nbr)
 {
 	int	i;
 

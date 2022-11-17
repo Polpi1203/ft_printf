@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/16 17:20:03 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/17 10:32:03 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ int	ft_check(va_list ap, char check)
 	else if (check == '%')
 		len = ft_flag_prc('%');
 	else if (check == 'x')
-		len = ft_convert_base(va_arg(ap, int));
+		len = ft_convert_base(va_arg(ap, unsigned int), "0123456789abcdef");
+	else if (check == 'X')
+		len = ft_convert_base(va_arg(ap, unsigned int), "0123456789ABCDEF");
 	return (len);
 }
 
@@ -51,10 +53,10 @@ int	ft_printf(const char *s, ...)
 	va_end(ap);
 	return (len);
 }
+
+
+//-------------TEST %c----------------
 /*
-
--------------TEST %c----------------
-
 int	main(int argc, char **argv)
 {
 	(void)argc;
@@ -115,8 +117,8 @@ int	main(int argc, char **argv)
 	(void)argc;
 	(void)argv;
 	printf("%s\n", "------FT_PRINTF------");
-	printf("\n%d", ft_printf(" %x ", -1));
+	printf("\n%d", ft_printf(" %x ", 127));
 	printf("\n%s\n", "------PRINTF------");
-	printf("\n%d", printf(" %x ", -1));
+	printf("\n%d", printf(" %x ", 127));
 }
 */
