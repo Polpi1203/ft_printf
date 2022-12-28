@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:45:58 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/17 13:31:30 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/12/08 14:00:25 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,9 @@ int	main(int argc, char **argv)
 	(void)argc;
 	(void)argv;
 	printf("%s\n", "------FT_PRINTF------");
-	printf("\n%d", ft_printf(" %% "));
+	printf("\n%d", ft_printf("123456"));
 	printf("\n%s\n", "------PRINTF------");
-	printf("\n%d", printf(" %% "));
+	printf("\n%d", printf("123456"));
 }
 */
 /*
